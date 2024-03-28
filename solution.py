@@ -1,6 +1,3 @@
-Here is a Python console application that validates a Sudoku board:
-
-```python
 def is_valid(board):
     for i in range(9):
         row = board[i]
@@ -21,23 +18,3 @@ def is_valid(board):
                 return False
 
     return True
-
-def is_valid_block(block):
-    filter_block = list(filter(lambda num: num != ".", block))
-    return len(set(filter_block)) == len(filter_block)
-
-def main():
-    board = []
-    for _ in range(9):
-        row = input("Enter a row of the Sudoku board (use '.' for empty spaces): ")
-        board.append(list(row))
-    if is_valid(board):
-        print("The Sudoku board is valid.")
-    else:
-        print("The Sudoku board is not valid.")
-
-if __name__ == "__main__":
-    main()
-```
-
-This console application asks the user to input each row of the Sudoku board. It then checks if the board is valid according to the rules of Sudoku. If the board is valid, it prints "The Sudoku board is valid." If the board is not valid, it prints "The Sudoku board is not valid."
